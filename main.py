@@ -46,4 +46,6 @@ def main():
     save_to_csv("students.csv", [s1.to_dict(), s2.to_dict(), s3.to_dict()])
     loaded_data = load_from_csv("students.csv")
     print(f"-> Loaded {len(loaded_data)} students from CSV.")
+
+    print(f"-> Assigned Advisor: {fetch_advisor()}")
     
