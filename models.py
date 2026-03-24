@@ -49,4 +49,7 @@ class Course:
             self.enrolled_students.append(student)
     
     def __add__(self, other):
-        
+        new_course = Course(f"{self.course_name} & {other.course_name}", "COMBINED")
+        for student in self.enrolled_students + other.enrolled_students:
+            new_course.add_student(student)
+        return new_course
