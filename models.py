@@ -39,4 +39,14 @@ class GraduateStudent(Student):
         return data
     
 class Course:
+    def __init__(self, course_name, course_code):
+        self.course_name = course_name
+        self.course_code = course_code
+        self.enrolled_students = []
+
+    def add_student(self, student):
+        if student not in self.enrolled_students:
+            self.enrolled_students.append(student)
     
+    def __add__(self, other):
+        
