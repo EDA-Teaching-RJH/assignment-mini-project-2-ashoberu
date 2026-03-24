@@ -8,4 +8,8 @@ def test_validate_student_id():
     assert validate_student_id("1234comp") == False
 
 def test_validate_email():
+    assert validate_email("student@kent.ac.uk") == True
+    assert validate_email("invalid@gmail.com") == False
+
+def test_student_creation_and_validation():
     
