@@ -42,4 +42,8 @@ def main():
     s1 = Student("Alice Smith", "ECE", "abcd1234")
     s2 = GraduateStudent("Bob Jones", "BIO", "efgh5678", "Cellular Biology")
     s3 = Student("Charlie Day", "ECE", "ijkl9012")
+
+    save_to_csv("students.csv", [s1.to_dict(), s2.to_dict(), s3.to_dict()])
+    loaded_data = load_from_csv("students.csv")
+    print(f"-> Loaded {len(loaded_data)} students from CSV.")
     
