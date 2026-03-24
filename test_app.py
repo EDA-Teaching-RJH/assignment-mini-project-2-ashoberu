@@ -19,4 +19,10 @@ def test_student_creation_and_validation():
         s = Student("Bob", "ART", "test0000")
 
 def test_course_addition():
+    c1 = Course("Math", "M101")
+    c2 = Course("Science", "S101")
+    s1 = Student("Alice", "ECE", "test0000")
     
+    c1.add_student(s1)
+    c3 = c1 + c2
+    assert s1 in c3.enrolled_students
