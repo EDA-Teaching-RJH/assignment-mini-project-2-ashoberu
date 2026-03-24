@@ -7,4 +7,8 @@ def validate_student_id(student_id):
     return bool(re.search(pattern, student_id))
 
 def validates_email(email):
+    pattern = r"^\w+@\w.+\.(ac\.uk|gov\.uk|nhs\.net)$"
+    return bool(re.search(pattern, email))
+
+def save_to_csv(filename, data_list):
     
