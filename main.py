@@ -48,4 +48,8 @@ def main():
     print(f"-> Loaded {len(loaded_data)} students from CSV.")
 
     print(f"-> Assigned Advisor: {fetch_advisor()}")
+
+    print("-> Generating enrollment chart...")
+    plot_degree_distribution(loaded_data)
     
+
