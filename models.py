@@ -28,3 +28,15 @@ class Student:
         return{"name": self.name, "student_id": self.student_id, "degree": self.degree, "type": "Student", "extra": ""}
     
 class GraduateStudent(Student):
+    def __init__(self, name, degree, student_id, research_topic):
+        super().__init__(name, degree, student_id)
+        self.research_topic = research_topic
+
+    def to_dict(self):
+        data = super().to_dict()
+        data["type"] = "Graduate"
+        data["extra"] = self.research_topic
+        return data
+    
+class Course:
+    
