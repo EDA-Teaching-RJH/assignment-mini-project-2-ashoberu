@@ -12,4 +12,11 @@ def test_validate_email():
     assert validate_email("invalid@gmail.com") == False
 
 def test_student_creation_and_validation():
+    s = Student("Alice", "ECE", "test0000")
+    assert s.name == "Alice"
+
+    with pytest.raises(ValueError):
+        s = Student("Bob", "ART", "test0000")
+
+def test_course_addition():
     
