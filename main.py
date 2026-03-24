@@ -51,5 +51,6 @@ def main():
 
     print("-> Generating enrollment chart...")
     plot_degree_distribution(loaded_data)
-    
 
+if __name__ == "__main__":
+    main()
