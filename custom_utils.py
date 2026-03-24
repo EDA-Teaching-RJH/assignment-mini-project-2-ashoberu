@@ -23,4 +23,13 @@ def save_to_csv(filename, data_list):
         writer.writerows(data_list)
 
 def load_from_csv(filename):
-    
+    data = []
+    try:
+        with open(filename, 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                data.append(row)
+    except FileNotFoundError:
+        print(f"Warning: {filename} not found.")
+    return data
+
